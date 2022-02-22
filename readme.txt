@@ -1,4 +1,4 @@
-=== 13Node.com - Simple Woocommerce Sale Countdown ===
+=== 13Node.com - Simple Sale Countdown for Woocommerce ===
 Contributors: ulloa
 Tags: countdown, timer, countdown timer
 Requires at least: 3.8
