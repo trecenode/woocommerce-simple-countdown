@@ -2,14 +2,20 @@
 /**
  * Plugin Name: Simple Sale Countdown by 13Node
  * Plugin URI:  https://13node.com/informatica/wordpress/simple-woocommerce-countdown-plugin/
- * Description: Muestra el tiempo que queda hasta que se acabe la oferta.
- * Version: 1.0
+ * Description: Show time left till the sale ends.
+ * Version: 1.1
  * Author: Danilo Ulloa
  * Author URI: https://13node.com
  * Text Domain: trecenode-countdown
+ * Domain Path: /languages
  */
-if(!defined('WPINC')) {
-    wp_die();
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+if ( ! defined( 'TRECE_TEXT_DOMAIN' ) ) {
+	define( 'TRECE_TEXT_DOMAIN', 'simple-sale-countdown-by-13node' );
 }
 
 add_filter( 'woocommerce_get_price_html', 'trece_price_html', 100, 2);
@@ -24,7 +30,7 @@ function trece_price_html( $price, $product )
         $sales_price_date_to = date("Y/m/d", $sales_price_to);
         return $price.'<br />
 		<div class="timer" style="background-color:#eff1f2; text-align:center; font-size:14px;">
-			<i class="fa fa-clock-o fa-spin" aria-hidden="true"></i> '.__( "La oferta finaliza en...", "trecenode-countdown").'<br />
+			<i class="fa fa-clock-o fa-spin" aria-hidden="true"></i> '.__("Sale ends in &hellip;", TRECE_TEXT_DOMAIN).'<br />
 			<div data-countdown="'.$sales_price_date_to.'"></div>
 	  	</div>
 	  ';
