@@ -1,9 +1,9 @@
-=== 13Node.com - Simple Sale Countdown for Woocommerce ===
+=== Simple Sale Countdown for Woocommerce by 13Node ===
 Contributors: ulloa
 Tags: countdown, timer, countdown timer
 Requires at least: 3.8
 Tested up to: 5.9
-Stable tag: 1.1
+Stable tag: 1.3
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -31,7 +31,10 @@ JS jQuery The Final Countdown by Hilios (https://github.com/hilios)
 2- Product Page
 
 == Changelog ==
-
+= 1.3 =
+* Hide Countdown and show regular price when sale date ends.
+= 1.2 =
+* Added native jquery support, fixed language translation
 = 1.1 =
 * Added Screenshots, images, and multi language support.
 = 1.0 =
